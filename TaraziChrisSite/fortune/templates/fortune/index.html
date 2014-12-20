@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fortunes</title>
+	</head>
+	<style type="text/css">
+		html {
+			margin: 1em 4em 0em 4em
+		}
+	</style>
+	<body>
+		<h2>Your fortune is...</h2>
+	<p>
+		<tt>
+			<b>
+				{{aphorism}} <!-- this is where views.py maps to what u want !-->
+			</b>
+		</tt>
+		<br>
+	</p>
+	<a href="{{fullPathImage}}"><img src="{{fullPathImage}}"/></a>
+	</body>
+</html>
