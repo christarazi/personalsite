@@ -5,7 +5,8 @@ import random
 from django.template import RequestContext, loader
 #from flickrapi import *
 
-from urllib.request import urlopen
+#from urllib.request import urlopen
+from urllib2 import urlopen
 from bs4 import BeautifulSoup
 import random
 # Create your views here.
