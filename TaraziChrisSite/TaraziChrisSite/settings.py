@@ -83,12 +83,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/usr/home/ctarazi/personalsite/TaraziChrisSite/TaraziChrisSite/static/'
+#STATIC_ROOT = '/usr/home/ctarazi/personalsite/TaraziChrisSite/TaraziChrisSite/static/'
 
 TEMPLATE_DIRS = [
     os.path.join(BASE_DIR, 'TaraziChrisSite/templates')
 ]
 
 STATICFILES_DIRS = (
-  '/usr/home/ctarazi/personalsite/static',
+    os.path.join(BASE_DIR, 'TaraziChrisSite/static')
+#  '/usr/home/ctarazi/personalsite/static',
 )
