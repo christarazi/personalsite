@@ -2,22 +2,86 @@
 <html>
 	<head>
 		<title>Fortunes</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 	</head>
 	<style type="text/css">
 		html {
-			margin: 1em 4em 0em 4em
+			display: table; 
+			width: 100%;
+			background-color: #E6E6E6;
+		}
+		/*
+		body, p {
+			height: 30%;
+			vertical-align: middle;
+			margin-right: 15%;
+			margin-left: 15%;
+			font-size: 24px;
+			color: #333333;
+			padding: 2px;
+		}*/
+		img {
+		    max-width: 40%;
+		    max-height: 40%;
+		    height: auto;
+		}
+		div.main {
+			width: 60%;
+			margin: auto;
+			text-align: center;
+			color: #494749;
+			border-style: solid;
+			background-color: white; 
+			padding: 0px 20px 10px 20px;
+			border-color: transparent;
+			box-shadow: 0 0 2px #333333;
+		}
+		div.links {
+			text-align: left;
+		}
+		h2.heading {
+			text-align: left;
+		}
+		p.aphorism {
+			font-size: 20px;
+			max-width: 50%;
+			margin: auto auto 1em auto;
+		}
+		a:link {
+			text-align: left;
+			vertical-align: left;
+			color: #5DBCD2;
+			padding: 5px;
+			text-decoration: none;
+		}
+		a:visited {
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+			color: #22444C;
 		}
 	</style>
 	<body>
-		<h2>Your fortune is...</h2>
-	<p>
-		<tt>
-			<b>
-				{{aphorism}} <!-- this is where views.py maps to what u want !-->
-			</b>
-		</tt>
-		<br>
-	</p>
-	<a href="{{fullPathImage}}"><img src="{{fullPathImage}}"/></a>
+		<div class="main">
+			<h2 class="heading">Your fortune is...</h2>
+			<p class="aphorism">
+				<tt>
+					<b>
+						{{aphorism}} <!-- this is where views.py maps to what u want !-->
+					</b>
+				</tt>
+				<br>
+			</p>
+			<a href="{{fullPathImage}}"><img align="center" src="{{fullPathImage}}"/></a>
+			<br>
+
+			<div class="links">
+				<a href="javascript:history.go(-1)"> Back </a>
+				<br>
+				<a href="javascript:history.go(0)"> Get new fortune </a>
+			</div>
+		</div>
+		
 	</body>
 </html>

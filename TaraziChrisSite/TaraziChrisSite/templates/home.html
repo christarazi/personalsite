@@ -2,18 +2,66 @@
 <html>
 	<head>
 		<title>My Homepage</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 	</head>
 	<style type="text/css">
 		html {
-		   
-		    text-align: center;
+			display: table; 
+			width: 100%;
+			background-color: #E6E6E6;
+		}
+		div.main {
+			margin: auto;
+			width: 60%;
+			color: #494749;
+			border-style: solid;
+			background-color: white; 
+			padding: 0px 20px 10px 20px;
+			border-color: transparent;
+			box-shadow: 0 0 2px #333333;
+		}
+		div.links {
+			text-align: left;
+		}
+		div.links a {
+			display: table-row;
+		}
+		h1 {
+			text-align: left;
+		}
+		h3 {
+			margin: -20px 0px 20px 0px;
+			font-weight: normal;
+		}
+		a:link {
+			/*text-align: left;
+			vertical-align: left;*/
+			color: #5DBCD2;
+			padding: 5px;
+			text-decoration: none;
+		}
+		a:visited {
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+			color: #22444C;
 		}
 	</style>
 	<body>
-		<h1>Hello. Welcome to Chris Tarazi's Personal Home Page</h1>
-		<a href="/ctarazi/static/resume.pdf"> Click here for my résumé. </a>
-		<br>
-		<a href="/ctarazi/fortune"> Click here for a fortune. </a>
+		<div class="main">
+			<h1> Christopher Tarazi </h1>
+			<h3> Programmer </h3>
+			<br>
+
+			<div class="links">
+				<a href="/static/resume.pdf"> Résumé </a>
+				<a href="https://github.com/christarazi"> GitHub </a>
+				<a href="http://stackoverflow.com/users/2193236/chris-tarazi"> Stack Overflow </a>
+				<a href="/fortune"> Get a fortune </a>
+			</div>
+		</div>
+
 	</body>
 </html>
 
