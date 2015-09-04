@@ -1,9 +1,11 @@
+
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 from django.views.generic import TemplateView
 
 # http://stackoverflow.com/a/11369944
+from django.conf import settings
 from django.contrib.staticfiles.views import serve
 from django.views.decorators.cache import never_cache
 
