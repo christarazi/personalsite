@@ -1,67 +1,90 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My Homepage</title>
+		<title>Christopher Tarazi</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 	</head>
 	<style type="text/css">
 		html {
-			display: table; 
 			width: 100%;
 			background-color: #E6E6E6;
 		}
 		div.main {
 			margin: auto;
-			width: 60%;
+			width: 75%;
 			color: #494749;
 			border-style: solid;
 			background-color: white; 
-			padding: 0px 20px 10px 20px;
+			padding: 1em;
+			padding-bottom: 2em; 
 			border-color: transparent;
 			box-shadow: 0 0 2px #333333;
+			overflow: auto;
 		}
-		div.links {
-			text-align: left;
-		}
-		div.links a {
-			display: table-row;
-		}
-		h1 {
-			text-align: left;
-		}
-		h3 {
+		li h3 {
 			margin: -20px 0px 20px 0px;
 			font-weight: normal;
 		}
-		a:link {
-			/*text-align: left;
-			vertical-align: left;*/
-			color: #5DBCD2;
-			padding: 5px;
-			text-decoration: none;
+		ul.center {
+			text-align: center;
+			list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
 		}
-		a:visited {
-			text-decoration: none;
+		ul.center li {
+			display: inline;
+			vertical-align: middle;
 		}
-		a:hover {
-			text-decoration: underline;
-			color: #22444C;
+		img.profile {
+			display: block;
+			margin: 0 auto;
+			height: 200px;
+			width: auto;
+			border-radius: 50%;
+		}
+		ul.nav {
+			margin: auto;
+			display: block;
+			width: 50%;
+			list-style-type: none;
+			text-align: center;
+			background: #5DBCD2;
+			border-top-left-radius: .5em;
+			border-bottom-left-radius: .5em;
+			border-top-right-radius: .5em;
+			border-bottom-right-radius: .5em;
+			padding: 1em;
+		}
+		ul.nav li {
+			display: inline;
+		}
+		ul.nav li a {
+			text-decoration: none;
+			color: white;
+			padding: 1em;
+		}
+		ul.nav li a:hover {
+			color: black;
 		}
 	</style>
 	<body>
 		<div class="main">
-			<h1> Christopher Tarazi </h1>
-			<h3> Programmer </h3>
-			<br>
-
-			<div class="links">
-				<a href="/ctarazi/static/resume.pdf"> Résumé </a>
-				<a href="https://github.com/christarazi"> GitHub </a>
-				<a href="http://stackoverflow.com/users/2193236/chris-tarazi"> Stack Overflow </a>
-				<a href="/ctarazi/fortune"> Get a fortune </a>
-			</div>
-		</div>
-
+			<ul class="center">
+				<li>
+					<img class="profile" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMnAAAAJDU5NTJkODhlLWRjZmItNGI4MS1hNjFlLWE4MzBiN2U2ZDg4ZQ.jpg">
+				</li>
+				<li><h1>Christopher Tarazi</h1></li>
+				<li><h3>Software Engineer</h3></li>
+			</ul>
+		<br>
+		<ul class="nav">
+			<li><a href="/ctarazi/static/resume.pdf"> Résumé </a></li>
+			<li><a href="https://github.com/christarazi"> GitHub </a></li>
+			<li><a href="http://stackoverflow.com/users/2193236/chris-tarazi"> Stack Overflow </a></li>
+			<li><a href="/ctarazi/fortune"> Get a fortune </a></li>
+		</ul>
+		</div>	
 	</body>
 </html>
 
