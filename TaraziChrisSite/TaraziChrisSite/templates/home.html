@@ -20,35 +20,36 @@
 			border-color: transparent;
 			box-shadow: 0 0 2px #333333;
 			overflow: auto;
+			text-align: center;
 		}
 		li h3 {
 			margin: -20px 0px 20px 0px;
 			font-weight: normal;
 		}
-		ul.center {
-			text-align: center;
+		ul.main-list {
 			list-style-type: none;
 		    margin: 0;
 		    padding: 0;
 		    overflow: hidden;
+		    opacity: 0;
+			transition: opacity 2s linear;
 		}
-		ul.center li {
+		ul.main-list li {
 			display: inline;
 			vertical-align: middle;
 		}
-		img.profile {
+		ul.main-list li img {
 			display: block;
 			margin: 0 auto;
 			height: 200px;
 			width: auto;
 			border-radius: 50%;
 		}
-		ul.nav {
+		ul.info-list {
 			margin: auto;
 			display: block;
 			width: 50%;
 			list-style-type: none;
-			text-align: center;
 			background: #5DBCD2;
 			border-top-left-radius: .5em;
 			border-bottom-left-radius: .5em;
@@ -56,35 +57,39 @@
 			border-bottom-right-radius: .5em;
 			padding: 1em;
 		}
-		ul.nav li {
+		ul.info-list li {
 			display: inline;
 		}
-		ul.nav li a {
+		ul.info-list li a {
 			text-decoration: none;
 			color: white;
 			padding: 1em;
 		}
-		ul.nav li a:hover {
+		ul.info-list li a:hover {
 			color: black;
 		}
 	</style>
-	<body>
+	<body onload="document.getElementsByClassName('main-list')[0].setAttribute('style', 'opacity:1;');">
 		<div class="main">
-			<ul class="center">
-				<li>
-					<img class="profile" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMnAAAAJDU5NTJkODhlLWRjZmItNGI4MS1hNjFlLWE4MzBiN2U2ZDg4ZQ.jpg">
+			<ul class="main-list">
+				<li id="picture">
+					<img id="imgPicture" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMnAAAAJDU5NTJkODhlLWRjZmItNGI4MS1hNjFlLWE4MzBiN2U2ZDg4ZQ.jpg">
 				</li>
-				<li><h1>Christopher Tarazi</h1></li>
-				<li><h3>Software Engineer</h3></li>
+				<li id="myName"><h1>Christopher Tarazi</h1></li>
+				<li id="myTitle"><h3>Software Engineer</h3></li>
 			</ul>
 		<br>
-		<ul class="nav">
-			<li><a href="/ctarazi/static/resume.pdf"> Résumé </a></li>
-			<li><a href="https://github.com/christarazi"> GitHub </a></li>
-			<li><a href="http://stackoverflow.com/users/2193236/chris-tarazi"> Stack Overflow </a></li>
-			<li><a href="/ctarazi/fortune"> Get a fortune </a></li>
+		<h2 id="headCntInfo">Contact Information</h2>
+		<ul class="info-list">
+			<li id="resume"><a href="/ctarazi/static/resume.pdf"> Résumé </a></li>
+			<li id="github"><a href="https://github.com/christarazi"> GitHub </a></li>
+			<li id="stackoverlfow"><a href="http://stackoverflow.com/users/2193236/chris-tarazi"> Stack Overflow </a></li>
+			<li id="fortune"><a href="/ctarazi/fortune"> Get a fortune </a></li>
 		</ul>
-		</div>	
+		</div>
+		<script type="text/javascript">
+			
+		</script>
 	</body>
 </html>
 
