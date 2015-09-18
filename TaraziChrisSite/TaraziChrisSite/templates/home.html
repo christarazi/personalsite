@@ -2,104 +2,16 @@
 <html>
 	<head>
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link href='stylesheet.css' rel='stylesheet' type='text/css'>
 		<title>Christopher Tarazi</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 	</head>
-	<style type="text/css">
-		* {
-			font-family: 'Roboto', sans-serif;
-		}
-		html {
-			width: 100%;
-			background-color: #E6E6E6;
-		}
-		div.main {
-			margin: auto;
-			width: 50%;
-			color: #494749;
-			border-style: solid;
-			background-color: white; 
-			padding: 1em;
-			padding-bottom: 2em; 
-			border-color: transparent;
-			box-shadow: 0 0 2px #333333;
-			overflow: auto;
-			text-align: center;
-			opacity: 0;
-			transition: opacity 2s ease-in .5s;
-		}
-		li h3 {
-			margin: -20px 0px 20px 0px;
-			font-weight: normal;
-		}
-		ul.main-list {
-			list-style-type: none;
-		    margin: 0;
-		    padding: 0;
-		    overflow: hidden;
-		}
-		ul.main-list li {
-			display: inline;
-		}
-		ul.main-list li img {
-			display: block;
-			margin: 0 auto;
-			height: 200px;
-			width: auto;
-			border-radius: 50%;
-			/*opacity: 0;
-			transition: opacity 2s linear 2s;*/
-		}
-		ul.info-list, ul.tech-list {
-			margin: 0;
-			display: block;
-			list-style-type: none;
-			padding: 0;
-			text-decoration: none;
-			/*background: #5DBCD2;
-			border-top-left-radius: .5em;
-			border-bottom-left-radius: .5em;
-			border-top-right-radius: .5em;
-			border-bottom-right-radius: .5em;
-			padding: 1em;*/
-		}
-		ul.info-list li, ul.tech-list li {
-			display: inline-block;
-		}
-		ul.info-list li a, ul.tech-list li a {
-		    position: relative;
-		    padding: 10px 40px;
-		    margin: 0px 10px 10px 0px;
-		    float: left;
-		    border-radius: 8px;
-		    font-size: 20px;
-		    color: #FFF;
-		    text-decoration: none;  
-		    background-color: #3498DB;
-		    border-bottom: 5px solid #2980B9;
-		    text-shadow: 0px -1px #2980B9;
-		    /* Animation */
-		    transition: all 0.1s;
-		    -webkit-transition: all 0.1s;
-		}
-		ul.info-list li a:hover, ul.info-list li a:focus,
-		ul.tech-list li a:hover, ul.tech-list li a:focus
-		{
-		    text-decoration: none;
-		    color: #fff;
-		}
-		ul.info-list li a:active, ul.tech-list li a:active {
-		    transform: translate(0px,-1px);
-		    border-bottom: 1px solid;
-		}
-	</style>
 	<script type="text/javascript">
 		function activateFade()
 		{
 			document.getElementsByClassName('main')[0].setAttribute('style', 'opacity:1;');
-			//document.getElementById('imgPicture').setAttribute('style', 'opacity:1;');
-			//document.getElementsByClassName('info-list')[0].setAttribute('style', 'opacity:1;');
-			//document.getElementsByClassName('tech-list')[0].setAttribute('style', 'opacity:1;');
+			document.getElementById('myName').setAttribute('style', 'opacity:1;');
+			document.getElementById('myTitle').setAttribute('style', 'opacity:1;');
 			// add all elements in here to change their opacity attribute
 			// add transition-delay to the element's css 
 		}
@@ -110,8 +22,8 @@
 				<li id="picture">
 					<img id="imgPicture" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMnAAAAJDU5NTJkODhlLWRjZmItNGI4MS1hNjFlLWE4MzBiN2U2ZDg4ZQ.jpg">
 				</li>
-				<li id="myName"><h1>Christopher Tarazi</h1></li>
-				<li id="myTitle"><h3>Software Engineer</h3></li>
+				<li><h1 id="myName">Christopher Tarazi</h1></li>
+				<li><h3 id="myTitle">Software Engineer</h3></li>
 			</ul>
 		<br>
 		<h2 id="headCntInfo">Contact Information</h2>
@@ -125,9 +37,18 @@
 		<ul class="tech-list">
 			<li id="github"><a href="https://github.com/christarazi">GitHub</a></li>
 			<li id="stackoverflow"><a href="http://stackoverflow.com/users/2193236/chris-tarazi">Stack Overflow</a></li>
-			<li id="fortune"><a href="/ctarazi/fortune">Get a fortune</a></li>
 		</ul>
+		
+		<br><hr><br>
+		<div>
+			<a id="fortuneApp" href="/ctarazi/fortune"><h3>Fortune Generator</h3></a>
+			<p>A web app developed in Python using Django that queries an SQL database for a fortune and fetches a random image from Flickr. Click button above to check it out.</p>
 
+			<br>
+			<a id="bitcoinApp" href="https://play.google.com/store/apps/details?id=app.CT.BTCCalculator"><h3>Bitcoin Calculator</h3></a>
+			<p>An Android app which serves as a calculator for finding break-even points and profit margins. It can also fetch the latest price index using the <a href="http://www.coindesk.com/">CoinDesk</a> API. I developed this to help me do day trading with Bitcoin a while back. As of September 2015, this app has been installed by 310 people.</p>
+
+		</div>
 		</div>
 	</body>
 </html>

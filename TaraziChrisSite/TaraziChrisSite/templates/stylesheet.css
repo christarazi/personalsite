@@ -1,0 +1,105 @@
+		* {
+			font-family: 'Roboto', sans-serif;
+		}
+		html {
+			width: 100%;
+			background-color: #CFCFCF;
+		}
+		div.main {
+			margin: auto;
+			width: 35%;
+			color: #494749;
+			border-style: solid;
+			background-color: white; 
+			padding: 1em;
+			padding-bottom: 2em; 
+			border-color: transparent;
+			box-shadow: 0 0 5px #333333;
+			overflow: auto;
+			text-align: center;
+			opacity: 0;
+			transition: opacity 1s ease-in .5s;
+		}
+		#myName {
+			opacity: 0;
+			transition: opacity 1s ease-in 1.75s;
+		}
+		#myTitle {
+			opacity: 0;
+			transition: opacity 1s ease-in 2.5s;
+		}
+
+		li h3 {
+			margin: -20px 0px 20px 0px;
+			font-weight: normal;
+		}
+		ul.main-list {
+			list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		}
+		ul.main-list li {
+			display: inline;
+		}
+		ul.main-list li img {
+			display: block;
+			margin: 0 auto;
+			height: 200px;
+			width: auto;
+			border-radius: 50%;
+			/*opacity: 0;
+			transition: opacity 2s linear 2s;*/
+		}
+		ul.info-list, ul.tech-list {
+			margin: 0;
+			display: block;
+			list-style-type: none;
+			padding: 0;
+			text-decoration: none;
+			/*background: #5DBCD2;
+			border-top-left-radius: .5em;
+			border-bottom-left-radius: .5em;
+			border-top-right-radius: .5em;
+			border-bottom-right-radius: .5em;
+			padding: 1em;*/
+		}
+		ul.info-list li, ul.tech-list li {
+			display: inline-block;
+		}
+		ul.info-list li a, ul.tech-list li a {
+		    position: relative;
+		    padding: 10px 40px;
+		    margin: 0px 10px 10px 0px;
+		    float: left;
+		    border-radius: 4px;
+		    font-size: 18px;
+		    color: white;
+		    text-decoration: none;  
+		    background-color: #55acee;
+  			box-shadow: 0px 5px 0px 0px #3C93D5;
+		}
+		ul.info-list li a:hover, ul.tech-list li a:hover
+		{
+		    text-decoration: none;
+			background-color: #6FC6FF;
+		}
+		ul.info-list li a:active, ul.tech-list li a:active, 
+		#fortuneApp:active, #bitcoinApp:active {
+		    transform: translate(0px, 5px);
+			-webkit-transform: translate(0px, 5px);
+			box-shadow: 0px 1px 0px 0px;
+		}
+		#fortuneApp, #bitcoinApp {
+			display: inline-block;
+		    padding: 0px 15px;
+		    border-radius: 4px;
+		    font-size: 14px;
+		    color: white;
+		    text-decoration: none;  
+		    background-color: #e67e22;
+			box-shadow: 0px 5px 0px 0px #CD6509;
+		}
+		#fortuneApp, #bitcoinApp {
+			background-color: #FF983C;
+		}
