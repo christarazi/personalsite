@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '-!4x1230o=)9gbyeg5j2_l$%kgdhtgdtf@c=2q=l&x1(s9qg80'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = True
 
@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'TaraziChrisSite',
     'fortune',
 )
 
@@ -69,7 +70,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Los_Angeles'
 
 USE_I18N = True
 
@@ -90,6 +91,6 @@ TEMPLATE_DIRS = [
 ]
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'TaraziChrisSite/static')
+    os.path.join(BASE_DIR, 'TaraziChrisSite/static'),
 #  '/usr/home/ctarazi/personalsite/static',
 )

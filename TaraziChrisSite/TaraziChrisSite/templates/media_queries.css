@@ -1,0 +1,111 @@
+		@media (min-width:1280px) {
+		    #baseContainer {
+		        width:1280px;
+		    }
+		}
+		@media (max-width:992px) {
+		    header nav li a {
+		        padding:12px 25px 18px 25px;
+		        font-size:15px;
+		    }
+		}
+		@media (max-width:768px) {
+		    header {
+		        padding-top:15px;
+		    }
+		    header nav li a {
+		        padding:8px 17px 12px 17px;
+		        font-size:14px;
+		    }
+		    #contentContainer {
+		        padding:0;
+		    }
+		    article {
+		        margin-right:0;
+		        padding:0 0 10px 0;
+		    }
+		    article {
+		        line-height:1.7em;
+		        padding:0 30px 15px 0;
+		        margin:0 30px 30px 0;
+		        border-bottom:1px solid #eee;
+		    }
+		    article h1 {
+		        font-size:30px;
+		    }
+		    article h2 {
+		        font-size:26px;
+		    }
+		    article h3 {
+		        font-size:24px
+		    }
+		    article h4 {
+		        font-size:21px;
+		    }
+		    article h5 {
+		        font-size:18px;
+		    }
+		    article h6 {
+		        font-size:16px;
+		    }
+		    article p {
+		        margin-bottom:30px;
+		    }
+		    article img {
+		        display:inline-block;
+		        height:auto;
+		        max-width:100%;
+		    }
+		    article ul, article ol {
+		        padding:0;
+		        margin-left:16px;
+		        margin-bottom:30px;
+		    }
+		    article blockquote {
+		        border-left:4px solid #3485b4;
+		        padding-left:30px;
+		        color:#aaa;
+		        font-style:italic;
+		    }
+		    article table {
+		        width:100%;
+		        margin-bottom:30px;
+		    }
+		    article td, article th {
+		        border:1px solid #ccc;
+		        padding:4px 8px;
+		    }
+		    article dt {
+		        font-weight:bold;
+		    }
+		    article dd {
+		        margin:0;
+		    }
+		    article embed {
+		        max-width:100%;
+		    }
+		    #post-title, .post-title {
+		        font-weight:bold;
+		        font-size:36px;
+		        line-height:46px;
+		    }
+		    .post-title a {
+		        color:#293136;
+		    }
+		    .post-title a:hover {
+		        color:#3485b4;
+		    }
+		    .post-meta {
+		        color:#aaa;
+		        border-left:3px solid #3485b4;
+		        line-height:1em;
+		        font-weight:bold;
+		        padding-left:8px;
+		    }
+		    .post-meta .sticky {
+		        color:#293136;
+		    }
+		    #post-title, .post-title {
+		        font-size:28px;
+		    }
+		}

@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Fortunes</title>
-		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-	</head>
-	<style type="text/css">
-		{% include "fortune/base.css" %}
-		/* -- media queries -- */
-		{% include "fortune/media_queries.css" %}
-	</style>
-	<body>
-		    <div id="baseContainer">
+{% extends viewName %}
+{% block base %}
+	    <div id="baseContainer">
 	        <header>
 	            <nav role="navigation">
 	                <ul id="navList" class="menu">
@@ -29,10 +19,10 @@
 	                            <img id="imgPicture" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMnAAAAJDU5NTJkODhlLWRjZmItNGI4MS1hNjFlLWE4MzBiN2U2ZDg4ZQ.jpg">
 	                        </li>
 	                        <li>
-	                        	<h3 id="myName">Christopher Tarazi</h3>
+	                             <h3 id="myName">Christopher Tarazi</h3>
 	                        </li>
 	                        <li>
-	                            <h3 id="myTitle">Software Engineer</h3>
+	                             <h3 id="myTitle">Software Engineer</h3>
 	                        </li>
 	                    </ul>
 	                    <ul id="sidebarSocial">
@@ -48,8 +38,8 @@
 	                    </ul>
 	                </aside>
 	            </div>
-	            <div id="fortune">
-	                {% include "fortune/fortune.html" %}
+	            <div id="allPosts">
+	                {% include "posts.html" %}
 	            </div>
 	        </div>
 	        <footer>
@@ -64,6 +54,5 @@
 	                </div>
 	            </div>
 	        </footer>
-	    </div>		
-	</body>
-</html>
+	    </div>
+{% endblock %}

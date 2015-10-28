@@ -3,13 +3,13 @@
 		}
 		html {
 			width: 100%;
-			background-color: #CFCFCF;
+			background-color: #293136;
 		}
 		div.main {
 			margin: auto;
 			min-width: 728px;
 			max-width: 728px;
-			color: #494749;
+			color: #000;
 			border-style: solid;
 			background-color: white; 
 			padding: 1em;
@@ -104,3 +104,17 @@
 		#fortuneApp, #bitcoinApp {
 			background-color: #FF983C;
 		}
+		header nav {background-color:#455159; font-weight:bold; width:100%;}
+		header nav ul {position:relative; padding:0; margin:0;}
+		header nav li {display:inline-block; border-top:4px solid #455159; margin-right:-5px;}
+		header nav li:hover {border-color:#4c575f; background-color:#4c575f;}
+		header nav li:hover a {color:#fff;}
+		header nav li a {color:#ccc; display:block; padding:16px 35px 20px 35px;}
+		header nav li a:hover {background-color:#4c575f; color:#fff;}
+		header nav li.current-menu-item {border-top:4px solid #3485b4;}
+		header nav li.current-menu-item a {background-color:#3c464d; color:#fff;}
+		header nav .sub-menu {display:none; position:absolute; z-index:9999; background-color:#eaeaea; text-align:left;}
+		header nav .sub-menu li {white-space:nowrap; font-size:12px; text-transform:none; padding:0; display:block; border:0; margin:0;}
+		header nav .sub-menu li a {padding:8px 35px; width:100%; display:block; color:#293136;}
+		header nav .sub-menu li a:hover {color:#fff;}
+

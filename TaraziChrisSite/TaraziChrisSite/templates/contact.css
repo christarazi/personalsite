@@ -1,0 +1,37 @@
+	#infoList, #techList {
+	    margin: 0;
+	    display: block;
+	    list-style-type: none;
+	    padding: 0;
+	    text-decoration: none;
+	    /*background: #5DBCD2;
+		border-top-left-radius: .5em;
+		border-bottom-left-radius: .5em;
+		border-top-right-radius: .5em;
+		border-bottom-right-radius: .5em;
+		padding: 1em;*/
+	}
+	#infoList li, #techList li {
+	    display: inline-block;
+	}
+	#infoList li a, #techList li a {
+	    position: relative;
+	    padding: 10px 40px;
+	    margin: 0px 10px 10px 0px;
+	    float: left;
+	    border-radius: 4px;
+	    font-size: 18px;
+	    color: white;
+	    text-decoration: none;
+	    background-color: #55acee;
+	    box-shadow: 0px 5px 0px 0px #3C93D5;
+	}
+	#infoList li a:hover, #techList li a:hover {
+	    text-decoration: none;
+	    background-color: #6FC6FF;
+	}
+	#infoList li a:active, #techList li a:active, #fortuneApp:active, #bitcoinApp:active {
+	    transform: translate(0px, 5px);
+	    -webkit-transform: translate(0px, 5px);
+	    box-shadow: 0px 1px 0px 0px;
+	}

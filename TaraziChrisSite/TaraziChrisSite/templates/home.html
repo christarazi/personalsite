@@ -1,55 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-		<link href='/ctarazi/static/stylesheet.css' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!--<link href='/home/chris/Documents/CS223/Assignment8/Part2/personalsite/TaraziChrisSite/TaraziChrisSite/static/stylesheet.css' rel='stylesheet' type='text/css'> !-->
 		<title>Christopher Tarazi</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8; 705" />
-	</head>
-	<script type="text/javascript">
+		<script type="text/javascript">
 		function activateFade()
 		{
-			document.getElementsByClassName('main')[0].setAttribute('style', 'opacity:1;');
+			//document.getElementsByClassName('contentContainer')[0].setAttribute('style', 'opacity:1;');
 			document.getElementById('myName').setAttribute('style', 'opacity:1;');
 			document.getElementById('myTitle').setAttribute('style', 'opacity:1;');
 			// add all elements in here to change their opacity attribute
 			// add transition-delay to the element's css 
 		}
 	</script>
+	<style type="text/css">
+		{% include "base.css" %}
+		/* -- media queries -- */
+		{% include "media_queries.css" %}
+	</style>
+	</head>
 	<body onload="activateFade();">
-		<div class="main">
-			<ul class="main-list">
-				<li id="picture">
-					<img id="imgPicture" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMnAAAAJDU5NTJkODhlLWRjZmItNGI4MS1hNjFlLWE4MzBiN2U2ZDg4ZQ.jpg">
-				</li>
-				<li><h1 id="myName">Christopher Tarazi</h1></li>
-				<li><h3 id="myTitle">Software Engineer</h3></li>
-			</ul>
-		<br>
-		<h2 id="headCntInfo">Contact Information</h2>
-		<ul class="info-list">
-			<li id="resume"><a href="/ctarazi/static/resume.pdf">Résumé</a></li>
-			<li id="lnikedin"><a href="https://www.linkedin.com/in/christarazi">LinkedIn</a></li>
-			<li id="email"><a href="mailto:chris.tarazi.@yahoo.com">Email Me</a></li>
-		</ul>
-		<br>
-		<h2 id="techInfo">Personal Projects</h2>
-		<ul class="tech-list">
-			<li id="github"><a href="https://github.com/christarazi">GitHub</a></li>
-			<li id="stackoverflow"><a href="http://stackoverflow.com/users/2193236/chris-tarazi">Stack Overflow</a></li>
-		</ul>
-		
-		<br><hr><br>
-		<div>
-			<a id="fortuneApp" href="/ctarazi/fortune"><h3>Fortune Generator</h3></a>
-			<p>A web app developed in Python using Django that queries an SQL database for a fortune and fetches a random image from Flickr. Click button above to check it out.</p>
-
-			<br>
-			<a id="bitcoinApp" href="https://play.google.com/store/apps/details?id=app.CT.BTCCalculator"><h3>Bitcoin Calculator</h3></a>
-			<p>An Android app which serves as a calculator for finding break-even points and profit margins. It can also fetch the latest price index using the <a href="http://www.coindesk.com/">CoinDesk</a> API. I developed this to help me do day trading with Bitcoin a while back. As of September 2015, this app has been installed by 310 people.</p>
-
-		</div>
-		</div>
+		{% block base %}{% endblock %}
 	</body>
 </html>
-

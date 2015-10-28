@@ -5,15 +5,15 @@ import random
 from django.template import RequestContext, loader
 #from flickrapi import *
 
-#from urllib.request import urlopen
-from urllib2 import urlopen
+from urllib.request import urlopen
+#from urllib2 import urlopen
 from bs4 import BeautifulSoup
 import random
 # Create your views here.
 
-keyword_list = ['cat', 'dog', 'animals', 'sports', 'people', 'cool', 'space']
+keyword_list = ['cities', 'city', 'computers', 'software', 'programming', 'code', 'beautiful', 'nature', 'earth', 'cat', 'sports', 'space', 'bayern', 'soccer', 'lakers', 'basketball']
 
-def findAnImageFromFlickrWithKeyword(keyword):
+def getImgFromFlickr(keyword):
   debug = False
   response = urlopen('http://api.flickr.com/services/feeds/photos_public.gne?tags=' + keyword + '&lang=en-us&format=rss_200').read( ).decode('utf-8')
 
@@ -65,7 +65,7 @@ def index(request):
 	results = Fortune.objects.filter(id=rn)
 	#aphorism = results[0].aphorism
 	template = loader.get_template('fortune/index.html')
-	context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage': findAnImageFromFlickrWithKeyword(random.choice(keyword_list)),})
+	context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage': getImgFromFlickr(random.choice(keyword_list)),})
 	# template loads the html page and looks for the braces.
 	# context then fills the braces with the information provided by the dictionary,
 	# ex. {'aphorism': ...}
@@ -78,7 +78,7 @@ def idAphorism(request, fortuneID):
     	fortuneID = 42
     results = Fortune.objects.filter(id=fortuneID)
     template = loader.get_template('fortune/index.html')
-    context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage': findAnImageFromFlickrWithKeyword(random.choice(keyword_list)),})
+    context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage': getImgFromFlickr(random.choice(keyword_list)),})
 
     return HttpResponse(template.render(context))
 
@@ -93,7 +93,7 @@ def short(request):
     '''
     results = Fortune.objects.filter(size__lt=140)
     template = loader.get_template('fortune/index.html')
-    context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage':findAnImageFromFlickrWithKeyword(random.choice(keyword_list)), 'size': results[0].size},)
+    context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage':getImgFromFlickr(random.choice(keyword_list)), 'size': results[0].size},)
 
     return HttpResponse(template.render(context))
 
@@ -101,6 +101,6 @@ def startrek(request):
 	rn = random.randint(14132,14334)			# this is the range of startrek aphorisms. 
 	results = Fortune.objects.filter(id=rn)
 	template = loader.get_template('fortune/index.html')
-	context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage': findAnImageFromFlickrWithKeyword(random.choice(keyword_list)), 'size': results[0].size},)
+	context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage': getImgFromFlickr(random.choice(keyword_list)), 'size': results[0].size},)
 
 	return HttpResponse(template.render(context))
