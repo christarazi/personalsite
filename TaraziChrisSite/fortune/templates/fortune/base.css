@@ -184,7 +184,7 @@
 		.social-links, .social-links:link, .social-links:visited,
 		.social-links:hover {
 			text-decoration: none;
-			color: inherit;
+			color: black;
 		}
 		article {
 			line-height: 1.7em;
@@ -196,7 +196,7 @@
 			width: auto;
 			height: auto;
 			max-width: 75%;
-			max-height: 75%;
+			max-height: 25%;
 			margin-top: 16px;
 			margin-right: 0;
 			margin-left: 0;

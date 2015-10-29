@@ -24,7 +24,7 @@ def getImgFromFlickr(keyword):
   for item in soup.find_all('item'):
     author_list = list(item.find_all('author'))
     media_list = list(item.find_all('media:content'))
-    title_list = list(item.find_all('media:title'))
+    #title_list = list(item.find_all('media:title'))
     if len(author_list) == len(media_list):
       for i in range(len(author_list)):
         #image_url_list.append((media_list[i]['url'], author_list[i]['flickr:profile'], title_list[i].string))
