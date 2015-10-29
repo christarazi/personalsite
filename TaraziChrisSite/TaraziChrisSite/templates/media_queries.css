@@ -69,7 +69,7 @@
 		padding: 0;
 	}
 	#links a {
-		margin: 0px 5px 5px 0px;
+		margin: auto;
 	}
 }
 /* Landscape phone to portrait tablet */
@@ -101,7 +101,7 @@
 		padding: 0;
 	}
 	#links a {
-		margin: 0px 5px 5px 0px;
+		margin: auto;
 	}
 }
 /* Landscape phones and down */
@@ -133,6 +133,6 @@
 		padding: 0;
 	}
 	#links a {
-		margin: 0px 5px 5px 0px;
+		margin: auto;
 	}
 }
