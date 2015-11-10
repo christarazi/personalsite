@@ -1,27 +1,8 @@
-/* Large desktop */
-
-@media (min-width: 1350px) and (max-width: 1699px) {
+/* Tablets to small laptops */
+@media (min-width: 1100px) and (max-width: 1699px) {
 	#baseContainer {
 		max-width: 90%;
-	}
-	header {
-		padding-top: 15px;
-	}
-	#primarySidebar {
-		width: 15%;
-	}
-	#fortune {
-		width: 81%;
-	}
-	#sidebarList li img {
-		height: 165px;
-	}
-}
-/* Medium desktop */
-
-@media (min-width: 1100px) and (max-width: 1349px) {
-	#baseContainer {
-		max-width: 90%;
+		font-size: 1.5vmax;
 	}
 	header {
 		padding-top: 0px;
@@ -29,31 +10,49 @@
 	#primarySidebar {
 		width: 15%;
 	}
+	#myName {
+		font-size: 2vmax;
+	}
 	#fortune {
 		width: 81%;
 	}
+	article a img {
+		max-width: 90%;
+	}
 	#sidebarList li img {
-		height: 135px;
+		height: 12vmax;
+	}
+	#links a {
+		font-size: 2vmax;
+	}
+	.post-title {
+		font-size: 3vmax;
+	}
+	.post-meta {
+		line-height: 3vmax;
+		font-size: 2vmax;
 	}
 }
-/* Portrait tablet to landscape and desktop */
 
-@media (min-width: 768px) and (max-width: 1099px) {
+/* Smartphones */
+@media (min-width: 0px) and (max-width: 1099px) {
 	#baseContainer {
 		max-width: 100%;
 		min-width: auto;
+		font-size: 3vmax;
 	}
 	#contentContainer {
-		padding-right: 10px;
-		padding-left: 10px;
+		padding: 1.5em 1em .5em 1em;
 	}
 	#primarySidebar {
-		float: none;
-		text-align: center;
-		margin: auto;
-		width: 100%;
-		margin-bottom: 40px;
-		padding: 0;
+		display: none;
+	}
+	#myName {
+		font-size: 4.5vmax;
+	}
+	#sidebarList li img {
+		margin-top: 1em;
+		height: 30vmax;
 	}
 	#fortune {
 		width: 100%;
@@ -62,77 +61,24 @@
 		padding-top: 0px;
 	}
 	header nav li a {
-		padding: 12px 25px 18px 25px;
-		font-size: 15px;
+		padding: 12px 25px 25px 25px;
 	}
 	article {
 		padding: 0;
 	}
-	#links a {
-		margin: auto;
-	}
-}
-/* Landscape phone to portrait tablet */
-
-@media (min-width: 640px) and (max-width: 767px) {
-	#baseContainer {
+	article a img {
 		max-width: 100%;
-		min-width: auto;
-	}
-	#contentContainer {
-		padding-right: 10px;
-		padding-left: 10px;
-	}
-	header {
-		padding-top: 0px;
-	}
-	#primarySidebar {
-		float: none;
-		text-align: center;
-		margin: auto;
-		width: 100%;
-		margin-bottom: 40px;
-		padding: 0;
-	}
-	#fortune {
-		width: 100%;
-	}
-	article {
-		padding: 0;
 	}
 	#links a {
-		margin: auto;
+		font-size: 3vmax;
+	}
+	.post-title {
+		font-size: 5vmax;
+		line-height: 2vmax;
+	}
+	.post-meta {
+		line-height: 4vmax;
+		font-size: 3vmax;
 	}
 }
-/* Landscape phones and down */
 
-@media (min-width: 320px) and (max-width: 639px) {
-	#baseContainer {
-		max-width: 100%;
-		min-width: auto;
-	}
-	#contentContainer {
-		padding-right: 10px;
-		padding-left: 10px;
-	}
-	header {
-		padding-top: 0px;
-	}
-	#primarySidebar {
-		float: none;
-		text-align: center;
-		margin: auto;
-		width: 100%;
-		margin-bottom: 40px;
-		padding: 0;
-	}
-	#fortune {
-		width: 100%;
-	}
-	article {
-		padding: 0;
-	}
-	#links a {
-		margin: auto;
-	}
-}

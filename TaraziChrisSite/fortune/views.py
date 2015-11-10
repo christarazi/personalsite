@@ -22,14 +22,18 @@ def getImgFromFlickr(keyword):
   image_url_list = []
 
   for item in soup.find_all('item'):
-    author_list = list(item.find_all('author'))
-    media_list = list(item.find_all('media:content'))
-    #title_list = list(item.find_all('media:title'))
-    if len(author_list) == len(media_list):
-      for i in range(len(author_list)):
-        #image_url_list.append((media_list[i]['url'], author_list[i]['flickr:profile'], title_list[i].string))
-        image_url_list.append((media_list[i]['url']))
-  return random.choice(image_url_list)
+  	author_list = list(item.find_all('author'))
+  	media_list = list(item.find_all('media:content'))
+  	#title_list = list(item.find_all('media:title'))
+  	if len(author_list) == len(media_list):
+  		for i in range(len(author_list)):
+  			#image_url_list.append((media_list[i]['url'], author_list[i]['flickr:profile'], title_list[i].string))
+  			image_url_list.append((media_list[i]['url']))
+
+  if image_url_list == []:
+  	return getImgFromFlickr('')
+  else:
+  	return random.choice(image_url_list)
 
 '''
 apiKey = u'3063b7003db59b5d27c7f0bbeb9aca6b'
@@ -73,29 +77,29 @@ def index(request):
 	return HttpResponse(template.render(context))
 
 def idAphorism(request, fortuneID):
-    # if user types a large value, set it to 42
-    if int(fortuneID) > 14334:
-    	fortuneID = 42
-    results = Fortune.objects.filter(id=fortuneID)
-    template = loader.get_template('fortune/index.html')
-    context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage': getImgFromFlickr(random.choice(keyword_list)),})
+	# if user types a large value, set it to 42
+	if int(fortuneID) > 14334:
+		fortuneID = 42
+	results = Fortune.objects.filter(id=fortuneID)
+	template = loader.get_template('fortune/index.html')
+	context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage': getImgFromFlickr(random.choice(keyword_list)),})
 
-    return HttpResponse(template.render(context))
+	return HttpResponse(template.render(context))
 
 def short(request):
-    #Fortune.objects.filer(size__lt=140)
-    '''
+	#Fortune.objects.filer(size__lt=140)
+	'''
 	while True:
 		rn = random.randint(0,14334)
 		results = Fortune.objects.filter(id=rn)
 		if(len(results[0].aphorism) < 140):
 			break
-    '''
-    results = Fortune.objects.filter(size__lt=140)
-    template = loader.get_template('fortune/index.html')
-    context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage':getImgFromFlickr(random.choice(keyword_list)), 'size': results[0].size},)
+	'''
+	results = Fortune.objects.filter(size__lt=140)
+	template = loader.get_template('fortune/index.html')
+	context = RequestContext(request, {'aphorism': results[0].aphorism, 'fullPathImage':getImgFromFlickr(random.choice(keyword_list)), 'size': results[0].size},)
 
-    return HttpResponse(template.render(context))
+	return HttpResponse(template.render(context))
 
 def startrek(request):
 	rn = random.randint(14132,14334)			# this is the range of startrek aphorisms. 
