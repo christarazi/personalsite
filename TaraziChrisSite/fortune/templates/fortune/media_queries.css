@@ -18,6 +18,8 @@
 	}
 	article a img {
 		max-width: 90%;
+		min-width: 80%;
+		width: 90%;
 	}
 	#sidebarList li img {
 		height: 12vmax;
@@ -68,6 +70,8 @@
 	}
 	article a img {
 		max-width: 100%;
+		min-width: 90%;
+		width: 100%;
 	}
 	#links a {
 		font-size: 3vmax;

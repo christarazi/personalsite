@@ -87,5 +87,6 @@
 	.post-meta {
 		margin-top: -3vmax;
 		border-left: .5vmax solid #3485b4;
+		font-size: 2vmax;
 	}
 }
