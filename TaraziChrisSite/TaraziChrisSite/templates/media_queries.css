@@ -70,7 +70,9 @@
 		line-height: 6vmax;
 	}
 	#allPosts {
-		width: 100%;
+		width: 81%;
+		margin-right: 4vmax;
+		margin-left: 4vmax;
 	}
 	header {
 		padding-top: 0px;
@@ -80,6 +82,9 @@
 	}
 	article {
 		padding: 0;
+	}
+	#allPosts article p {
+		line-height: 4.5vmax;
 	}
 	#links a {
 		font-size: 3vmax;
