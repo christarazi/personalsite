@@ -1,0 +1,33 @@
+baseURL = "http://christarazi.me/"
+languageCode = "en-us"
+title = "christarazi"
+theme = "cocoa"
+
+[[menu.main]]
+  name       = "About"
+  weight     = -120
+  identifier = "about"
+  url        = "/about/"
+
+[[menu.main]]
+  name       = "Blog"
+  weight     = -110
+  identifier = "blog"
+  url        = "/blog/"
+
+[[menu.main]]
+  name       = "Projects"
+  weight     = -100
+  identifier = "projects"
+  url        = "/projects/"
+
+[params]
+  include_rss      = true                          # include RSS <link> tag in <head> and show RSS icon
+  latestpostscount = 5                             # how many posts to display on the home page
+  author           = "Chris Tarazi"
+  dateform         = "Jan 2, 2006"
+  dateformfull     = "Mon Jan 2 2006 15:04:05 MST"
+  github           = "//github.com/christarazi"
+  keybase          = "//keybase.io/christarazi"
+  lang             = "en"
+  selfintro        = ""                            # appears in the site header when set to a non-empty string
