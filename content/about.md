@@ -9,3 +9,4 @@ advocate. This is a website where I document projects that I've worked on,
 and probably blog about some stuff that might be unrelated to programming -- I
 don't know yet. Welcome!
 
+You can reach here: tarazi (nospace) chris at gmail (dot) com.
