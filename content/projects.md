@@ -6,6 +6,7 @@ publishDate: 2018-02-19T22:08:21-08:00
 
 ## Open source contributions
  - [nheko](https://github.com/mujx/nheko) -- Matrix desktop cleint
+ - [cppclean](https://github.com/myint/cppclean) -- C++ code cleaner/linter
  - [portSpider](https://github.com/xdavidhu/portSpider) -- network scanner framework
  - [tab-suspender](https://github.com/rNeomy/tab-suspender) -- Firefox WebExtension
  - [megatools](https://github.com/megous/megatools) -- Mega client and library
