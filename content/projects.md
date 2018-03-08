@@ -5,7 +5,7 @@ publishDate: 2018-02-19T22:08:21-08:00
 ---
 
 ## Open source contributions
- - [nheko](https://github.com/mujx/nheko) -- Matrix desktop cleint
+ - [nheko](https://github.com/mujx/nheko) -- Matrix desktop client
  - [mtxclient](https://github.com/mujx/mtxclient) -- C++ client library implementing the Matrix protocol
  - [matrix-structs](https://github.com/mujx/matrix-structs) -- C++ library for data structures used in Matrix protocol
  - [riot-android](https://github.com/vector-im/riot-android) -- official Android Matrix client app
